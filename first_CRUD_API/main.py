@@ -1,5 +1,6 @@
 
 from fastapi import FastAPI, HTTPException
+from pydantic import BaseModel
 
 app = FastAPI()
 
@@ -22,6 +23,43 @@ tasks = [
     }
 ]
 
+
+
+# FastAPI needs to know: What data should arrive? and What type should it be?
+# Request body model
+class TaskCreate(BaseModel):
+    title: str
+#A new task must contain a title, and it must be text.
+
+
+# CREATE new task,
+# this creates POST endpoint (POST /tasks)
+@app.post("/tasks", status_code=201)
+def create_task(task: TaskCreate):
+
+
+    # Validation
+    # client sends { "title": "Buy milk"} so fastapi converts it to task.title which contains buy milk
+    if not task.title.strip(): 
+        raise HTTPException(
+            status_code=400,
+            detail="Title cannot be empty"
+        )
+
+    # Generate next ID
+    new_id = max(t["id"] for t in tasks) + 1
+
+    # Create task object
+    new_task = {
+        "id": new_id,
+        "title": task.title,
+        "done": False
+    }
+
+    # Save task
+    tasks.append(new_task)
+
+    return new_task
 
 #stage 1: root endpoint
 @app.get("/")
