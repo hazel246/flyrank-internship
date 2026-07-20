@@ -1,0 +1,75 @@
+# Portfolio Cases: Hafsa
+
+**Voice card:** genuine, realistic, plain, innovative, no hype
+
+---
+
+## Tangent Maths
+
+**The problem**
+Most students revising for IGCSE maths don't actually practice. They look at the mark scheme, copy the answer, and move on. When they get a question wrong, they rarely stop to understand *why*. And because there's no follow-up, the same mistake resurfaces weeks later. As an O and A-Level maths teacher, I saw this pattern constantly. As a CS student, I kept thinking: this is a solvable problem.
+
+**What I did**
+I built Tangent Maths, a practice app that starts with one IGCSE topic, E9.7 Histograms, and does one thing properly rather than many things badly. When a student gets a question wrong, the app doesn't just mark it wrong. It diagnoses the specific misconception behind the mistake and shows a full worked solution, so the student understands *what* they misunderstood, not just *that* they got it wrong.
+
+A few decisions mattered here. Marking happens in code, not through AI. A student's answer is checked against a stored correct answer with plain logic, so it costs almost nothing to serve each student. The misconception explanations are pre-written and stored in a table that maps specific wrong answers to specific explanations, rather than generated live, so the diagnosis is reliable and consistent, not improvised. And to stop mistakes from recurring, the app uses spaced repetition (the SM-2 algorithm, the same idea behind Anki), scheduling when each skill comes back, stretching the gap when a student gets it right, snapping it back when they don't.
+
+**What came of it**
+The project is in progress: I'm currently converting the backend from Python to TypeScript, after which I'll test it, refine the frontend, and deploy. It's early, but the aim isn't a feature list. It's a habit: a student reads the notes, does the practice questions, understands exactly where they went wrong, and comes back to it before they forget. Tangent Maths is my main personal project, distinct from the coursework projects below.
+
+---
+
+## Voltara
+
+**The problem**
+For my Web Technologies semester project at university, I had to build a complete full-stack web application from scratch, not a toy demo, something that actually behaved like a real product: user accounts, an admin side, a working catalogue, all of it.
+
+**What I did**
+I built Voltara, a full-stack site for a fictional solar energy company, on Node.js, Express, and MongoDB, with EJS handling the templating. I put in proper user authentication with bcrypt password hashing and session management, and role-based access so admins get a full management panel while customers just see the shop. The product catalogue handles 28 products with category filtering and server-side pagination, and I added a dynamic on-sale page that paginates client-side with jQuery, so browsing sale items doesn't reload the page. The homepage has a quote request form with live validation on name, phone, and email, and the whole thing is responsive on mobile via Bootstrap 5.
+
+**What came of it**
+A working, end-to-end site with real CRUD in the admin panel, not just a front-end mockup. It's the project where I properly learned how the pieces of a full-stack app (auth, sessions, database, templating, client-side interactivity) actually fit together.
+
+---
+
+## AidSync
+
+**The problem**
+Recurring floods in Pakistan keep exposing the same failure: aid doesn't reach people efficiently. NGOs can't coordinate in real time, donors don't know where help is actually needed, families face delays, and there's little transparency, which also opens the door to scams and duplicate aid requests that dilute genuine relief.
+
+**What I did**
+Working with a teammate, I built AidSync, a flood relief and disaster aid management platform (MVP) meant to bring structure and trust into emergency response. It lets authorized operators centrally register flood-affected families and their aid requests, onboard and coordinate multiple NGOs and donor initiatives in one system, and match verified donor contributions to specific, vetted needs. To handle the decision-making that usually slows relief down, we integrated four AI/ML models: one to predict aid demand from historical disaster data, one to match donor resources to validated requests, one to flag duplicate or fraudulent entries, and one to score requests by urgency (medical conditions, lack of water, vulnerability). We also built an admin dashboard with data visualizations for real-time transparency, plus receipt and report generation. It's built on Python (PyQt5 for the desktop interface), FastAPI, and MS SQL Server.
+
+**What came of it**
+An MVP that shows what disaster relief coordination could look like if it used AI to prioritize and verify instead of relying on manual, fragmented processes. It's a step toward using technology for social impact where the systems help people at the moment they need it most, not after.
+
+---
+
+## DSA Minesweeper
+
+**The problem**
+For a Data Structures & Algorithms course project, my team wanted to build something that used real DSA concepts under the hood instead of just implementing them in isolation for an assignment. We wanted something you could actually play, where the structures were doing real work.
+
+**What I did**
+We rebuilt classic Minesweeper in C++ with a full DSA backbone: a 2D array for the grid, mines, and cell values; a queue running BFS to reveal large connected empty zones in a single click; a linked list to dynamically store mine positions; a min/max heap for smart mine placement depending on difficulty; and BFS-based graph traversal to make zero-cell reveals fast. The GUI was built with SFML to handle the visuals and input while the data structures did the actual work behind the scenes. I built this with my teammates Syed Ali Turab, Rao Zain Ali, and Fizza Rashid.
+
+**What came of it**
+A playable, fully working Minesweeper where every core mechanic (reveal, placement, difficulty scaling) is backed by a specific data structure or algorithm rather than shortcuts, which made it a solid way to actually see DSA concepts working in something real instead of just on paper.
+
+---
+
+## Bio
+
+Hafsa. O and A-Level maths teacher and CS student. I build things that sit at the overlap of the two: right now, that's Tangent Maths, a practice app that tries to fix *why* students keep making the same mistakes, not just mark them wrong. Plain, realistic, no over-promising.
+
+**Contact / CTA:** Want to see how it works? Reach me at [Email] or connect on [LinkedIn].
+
+---
+
+## Before / After
+
+**Generic AI version:**
+"Tangent Maths is an innovative, results-driven EdTech solution leveraging AI-powered personalization to revolutionize the way students engage with IGCSE mathematics, driving improved outcomes through cutting-edge adaptive learning technology."
+
+**Edited version (mine):**
+"I built Tangent Maths because students were copying mark schemes instead of learning from their mistakes. When you get a question wrong, it tells you exactly why. Then it makes sure that mistake comes back to haunt you (in a good way) before you forget it."
