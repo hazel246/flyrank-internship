@@ -1,5 +1,11 @@
 ## Assignments:
 
-Build your first CRUD API:
+
+# Backend: 
+# Build your first CRUD API:
 - first_CRUD_API
 - first_CRUD_API_USING_JS
+
+
+# AI Fluency:
+- Frame It as Cases
