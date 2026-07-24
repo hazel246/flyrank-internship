@@ -10,3 +10,4 @@ Backend:
 
 AI Fluency:
 1. Frame It as Cases
+2. Prompt Ladder
